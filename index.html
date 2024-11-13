@@ -8,7 +8,7 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <link rel="icon" href="images/logo.jpeg" type="image/gif" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -23,19 +23,66 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
 </head>
 
 <body>
-
+  
   <!-- header section strats -->
   <header class="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
         <a class="navbar-brand" href="index.html">
-          <span>
-            Megha's Artistry Hub
+         
+          <img style="height: 60px;width: 60px;border-radius: 30px;margin: 0;" src="images/logo.jpeg" alt="">
+          <span id="makeover-text" style="font-family: 'Georgia', serif; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(90deg, #e3c567, #d4af37, #f2d857); background-size: 200% auto; -webkit-background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255, 223, 0, 0.7); animation: goldShine 3s linear infinite;">
+            Megha's Makeover
           </span>
+          <!-- <div style="background-color: #f4ebd9; padding: 30px; text-align: center; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+            <h1 style="font-family: 'Georgia', serif; font-size: 60px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(90deg, #e3c567, #d4af37, #f2d857); background-size: 200% auto; -webkit-background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255, 223, 0, 0.7); animation: goldShine 3s linear infinite;">
+              Megha's Makeover
+            </h1>
+          </div> -->
+          
+          <style>
+            /* Keyframe for the gradient animation */
+            @keyframes goldShine {
+              0% {
+                background-position: 0% 50%;
+              }
+              100% {
+                background-position: 100% 50%;
+              }
+            }
+          
+            /* Default font size for desktop */
+            #makeover-text {
+              font-size: 35px;  /* Starting size for desktop screens */
+            }
+          
+            /* Responsive adjustments for tablets */
+            @media (max-width: 1024px) {
+              #makeover-text {
+                font-size: 28px;  /* Adjust for smaller screens like tablets */
+              }
+            }
+          
+            /* Responsive adjustments for mobile devices */
+            @media (max-width: 768px) {
+              #makeover-text {
+                font-size: 22px;  /* Reduce font size for mobile devices */
+              }
+            }
+          
+            /* Extra small screens (phones in portrait mode) */
+            @media (max-width: 480px) {
+              #makeover-text {
+                font-size: 18px;  /* Smallest font size for very small screens */
+              }
+            }
+          </style>
+       
         </a>
         <div class="" id="">
 
@@ -46,11 +93,11 @@
               <span class="s-3"> </span>
             </button>
             <div id="myNav" class="overlay">
-              <div class="overlay-content">
+             <div class="overlay-content">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="shop.html">Shop</a>
-                <a href="blog.html">Blog</a>
+                <a href="shop.html">Services</a>
+                <a href="blog.html">Our Latest Work</a>
               </div>
             </div>
           </div>
@@ -67,29 +114,37 @@
       <img src="images/slider-bg.JPG" alt="">
     </div>
     <div class="slider_bg"></div>
-    <div class="container">
-      <div class="col-md-9 col-lg-8">
-        <div class="detail-box">
-          <h1>
-            Welcome to Megha's 
-            <br>Glam Studio!
+    <div class="container" style="position: relative; margin-top: 400px;">
+      <div class="col-md-9 col-lg-9">
+        <div class="detail-box" style="position: relative; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+          <h1 style="font-family: 'Georgia', serif; font-size: 32px; font-weight: bold; color: #fff; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); letter-spacing: 2px;">
+            Welcome to Megha's <br> Glam Studio!
           </h1>
-          <p>
-            At Megha's Glam Studio, we believe in enhancing your natural beauty and making every occasion special. With a passion for artistry and a keen eye for detail, Megha specializes in stunning makeup and intricate mehndi designs that will leave you feeling radiant and confident.
-          </p>
+          
           <div>
-            <a href="" class="slider-link">
-              Shop Now
+            <a href="https://wa.me/9359412349" class="slider-link" style="background-color: #25D366; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+             
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            &nbsp;
+              Connect with us
             </a>
           </div>
         </div>
       </div>
     </div>
+    
   </section>
   <!-- end slider section -->
 
     <!-- services section -->
-
+    <!-- <form id="inquiry-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <input type="file" id="image" />
+      <button type="submit">Submit Inquiry</button>
+      <div id="status"></div>
+   </form> -->
     <section class="blog_section" style="margin-top: 50px;">
       <div class="container">
         <div class="heading_container heading_center">
@@ -257,7 +312,7 @@
 
   <!-- shop section -->
 
-  <section class="shop_section layout_padding">
+  <!-- <section class="shop_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -472,7 +527,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end shop section -->
 
@@ -513,8 +568,11 @@
       <div class="row">
         <div class="col-md-7 px-0">
           <div class="box offer-box1">
-            <img src="images/o1.jpg" alt="">
+            <img src="images/m-m3.jpeg" alt="">
             <div class="detail-box">
+              <h6>
+                Mehndi & Two makeup looks
+              </h6>
               <h2>
                 Upto 15% Off
               </h2>
@@ -526,8 +584,11 @@
         </div>
         <div class="col-md-5 px-0">
           <div class="box offer-box2">
-            <img src="images/o2.jpg" alt="">
+            <img src="images/m-m.jpeg" alt="">
             <div class="detail-box">
+              <h6>
+                Mehndi & One makeup looks
+              </h6>
               <h2>
                 Upto 10% Off
               </h2>
@@ -537,8 +598,11 @@
             </div>
           </div>
           <div class="box offer-box3">
-            <img src="images/o3.jpg" alt="">
+            <img src="images/m-m2.jpg" alt="">
             <div class="detail-box">
+              <h6>
+                Mehndi & Three makeup looks
+              </h6>
               <h2>
                 Upto 20% Off
               </h2>
@@ -560,7 +624,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Latest From Blog
+          Signature Cultural Makeovers
         </h2>
       </div>
       <div class="row">
@@ -568,21 +632,19 @@
           <div class="box">
             <div class="img-box">
               <img src="images/b1.jpeg" alt="">
-              <h4 class="blog_date">
+              <!-- <h4 class="blog_date">
                 14 <br>
                 July
-              </h4>
+              </h4> -->
             </div>
             <div class="detail-box">
               <h5>
-                Molestiae ad reiciendis dignissimos
+                South Indian Look
               </h5>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                A classic South Indian look with bold, kohl-lined eyes, golden eyeshadow, and a rich red lip. Paired with traditional jewelry and fresh flowers in the hair, this look radiates timeless elegance.
               </p>
-              <a href="">
-                Read More
-              </a>
+             
             </div>
           </div>
         </div>
@@ -590,21 +652,19 @@
           <div class="box">
             <div class="img-box">
               <img src="images/b2.jpeg" alt="">
-              <h4 class="blog_date">
+              <!-- <h4 class="blog_date">
                 15 <br>
                 July
-              </h4>
+              </h4> -->
             </div>
             <div class="detail-box">
               <h5>
-                Dolores vel maiores voluptatem enim
+                Maharashtrian Look
               </h5>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Bold eye makeup with copper tones, a striking red lip, and sharp brows. Finished with the iconic Maharashtrian 'nath' and floral-adorned bun, this look exudes regal tradition.
               </p>
-              <a href="">
-                Read More
-              </a>
+              
             </div>
           </div>
         </div>
@@ -630,18 +690,16 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="" />
+                    <img src="images/client.jpeg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
                       <h6>
-                        Samantha Jonas
+                       Pooja waghmare
                       </h6>
                     </div>
                     <p>
-                      It is a long established fact that a reader will be
-                      distracted by the readable cIt is a long established fact
-                      that a reader will be distracted by the readable c
+                      Megha did an amazing job with my South Indian bridal makeup! It lasted all day, and I got so many compliments.Thank you so much
                     </p>
                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                   </div>
@@ -654,18 +712,16 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="" />
+                    <img src="images/client2.jpeg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
                       <h6>
-                        Samantha Jonas
+                        Sakshi Patil
                       </h6>
                     </div>
                     <p>
-                      It is a long established fact that a reader will be
-                      distracted by the readable cIt is a long established fact
-                      that a reader will be distracted by the readable c
+                      I loved my Maharashtrian bridal look! Megha blended tradition and style perfectly, and the makeup went great with my outfit.
                     </p>
                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                   </div>
@@ -678,18 +734,16 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="" />
+                    <img src="images/client3.jpeg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
                       <h6>
-                        Samantha Jonas
+                        Swara Patil
                       </h6>
                     </div>
                     <p>
-                      It is a long established fact that a reader will be
-                      distracted by the readable cIt is a long established fact
-                      that a reader will be distracted by the readable c
+                      Megha gave me the perfect glam look for my event. The makeup was flawless and made me feel so confident!
                     </p>
                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                   </div>
@@ -719,14 +773,14 @@
     <div class="container">
       <div class="row info_form_social_row">
         <div class="col-md-8 col-lg-9">
-          <div class="info_form">
+          <!-- <div class="info_form">
             <form action="">
               <input type="email" placeholder="Enter your email">
               <button>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </button>
             </form>
-          </div>
+          </div> -->
         </div>
         <div class="col-md-4 col-lg-3">
 
@@ -756,8 +810,8 @@
             <div class="info_links_menu">
               <a href="index.html">Home</a>
               <a href="about.html">About</a>
-              <a href="shop.html">Shop</a>
-              <a href="blog.html">Blog</a>
+              <a href="shop.html">Services</a>
+              <a href="blog.html">Our Latest Work</a>
             </div>
           </div>
         </div>
@@ -847,6 +901,57 @@
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+  <!-- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyADOrOajhMyuantaxzSB6VOqwhFezRvUdA",
+      authDomain: "meghas-website.firebaseapp.com",
+      projectId: "meghas-website",
+      storageBucket: "meghas-website.firebasestorage.app",
+      messagingSenderId: "877264673640",
+      appId: "1:877264673640:web:d9da385e8bb8de36b894dd"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    // Function to handle form submission
+    function submitForm(event) {
+      event.preventDefault();
+  
+      // Get form values
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let message = document.getElementById('message').value;
+  
+      // Reference to the Firestore collection
+      const inquiriesCollection = collection(db, "inquiries");
+  
+      // Add the inquiry to the collection
+      addDoc(inquiriesCollection, {
+        name: name,
+        email: email,
+        message: message
+      })
+      .then(() => {
+        console.log("Inquiry successfully submitted!");
+        alert("Thank you! Your inquiry has been sent.");
+      })
+      .catch((error) => {
+        console.error("Error submitting inquiry: ", error);
+      });
+    }
+  
+    // Attach the submitForm function to the form's submit event
+    document.getElementById("inquiry-form").addEventListener("submit", submitForm);
+  </script> -->
+ 
+
 
 </body>
 
