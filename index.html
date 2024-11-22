@@ -1,223 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <link rel="icon" href="images/logo.jpeg" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <link rel="icon" href="images/logo.jpeg" type="image/gif" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <title>Megha's Artistry Hub</title>
 
-  <title>Megha's Artistry Hub</title>
- 
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
+  </head>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
-</head>
+  <body>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              style="height: 60px; width: 60px; border-radius: 30px; margin: 0"
+              src="images/logo.jpeg"
+              alt=""
+            />
 
-<body>
-  
-  <!-- header section strats -->
-  <header class="header_section">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="index.html">
-         
-          <img style="height: 60px;width: 60px;border-radius: 30px;margin: 0;" src="images/logo.jpeg" alt="">
-        
-          <!-- <div style="background-color: #f4ebd9; padding: 30px; text-align: center; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+            <!-- <div style="background-color: #f4ebd9; padding: 30px; text-align: center; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
             <h1 style="font-family: 'Georgia', serif; font-size: 60px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(90deg, #e3c567, #d4af37, #f2d857); background-size: 200% auto; -webkit-background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255, 223, 0, 0.7); animation: goldShine 3s linear infinite;">
               Megha's Makeover
             </h1>
           </div> -->
-          
-          <style>
-            /* Keyframe for the gradient animation */
-            @keyframes goldShine {
-              0% {
-                background-position: 0% 50%;
-              }
-              100% {
-                background-position: 100% 50%;
-              }
-            }
-          
-            /* Default font size for desktop */
-            #makeover-text {
-              font-size: 35px;  /* Starting size for desktop screens */
-            }
-          
-            /* Responsive adjustments for tablets */
-            @media (max-width: 1024px) {
-              #makeover-text {
-                font-size: 28px;  /* Adjust for smaller screens like tablets */
-              }
-            }
-          
-            /* Responsive adjustments for mobile devices */
-            @media (max-width: 768px) {
-              #makeover-text {
-                font-size: 22px;  /* Reduce font size for mobile devices */
-              }
-            }
-          
-            /* Extra small screens (phones in portrait mode) */
-            @media (max-width: 480px) {
-              #makeover-text {
-                font-size: 18px;  /* Smallest font size for very small screens */
-              }
-            }
-          </style>
-       
-        </a>
-        <div class="" id="">
 
-          <div class="custom_menu-btn">
-            <button onclick="openNav()">
-              <span class="s-1"> </span>
-              <span class="s-2"> </span>
-              <span class="s-3"> </span>
-            </button>
-            <div id="myNav" class="overlay">
-             <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="shop.html">Services</a>
-                <a href="blog.html">Our Latest Work</a>
+            <style>
+              /* Keyframe for the gradient animation */
+              @keyframes goldShine {
+                0% {
+                  background-position: 0% 50%;
+                }
+                100% {
+                  background-position: 100% 50%;
+                }
+              }
+
+              /* Default font size for desktop */
+              #makeover-text {
+                font-size: 35px; /* Starting size for desktop screens */
+              }
+
+              /* Responsive adjustments for tablets */
+              @media (max-width: 1024px) {
+                #makeover-text {
+                  font-size: 28px; /* Adjust for smaller screens like tablets */
+                }
+              }
+
+              /* Responsive adjustments for mobile devices */
+              @media (max-width: 768px) {
+                #makeover-text {
+                  font-size: 22px; /* Reduce font size for mobile devices */
+                }
+              }
+
+              /* Extra small screens (phones in portrait mode) */
+              @media (max-width: 480px) {
+                #makeover-text {
+                  font-size: 18px; /* Smallest font size for very small screens */
+                }
+              }
+            </style>
+          </a>
+          <div class="" id="">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About</a>
+                  <a href="shop.html">Services</a>
+                  <a href="blog.html">Our Latest Work</a>
+                </div>
               </div>
             </div>
           </div>
-
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!-- end header section -->
-
-  <!-- slider section -->
-  <section class="slider_section position-relative">
-    <div class="slider_bg_box">
-      <img src="images/slider-bg.JPG" alt="">
-    </div>
-    <div class="slider_bg"></div>
-    <div class="container" style="position: relative; margin-top: 400px;">
-      <div class="col-md-9 col-lg-9">
-        <div class="detail-box" style="position: relative; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
-          <h1 style="font-family: 'Georgia', serif; font-size: 32px; font-weight: bold; color: #fff; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); letter-spacing: 2px;">
-            Welcome to,<br>
-          </h1>
-          <span id="makeover-text" style="font-family: 'Georgia', serif; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(90deg, #e3c567, #d4af37, #f2d857); background-size: 200% auto; -webkit-background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255, 223, 0, 0.7); animation: goldShine 3s linear infinite;">
-            Megha's Makeover
-          </span>
-          <div>
-            <a href="https://wa.me/9359412349" class="slider-link" style="background-color: #25D366; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); display: inline-flex; align-items: center;">
-              <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 24px;"></i>
-              &nbsp;
-              Connect with us
-          </a>
-          
-          </div>
-        </div>
+        </nav>
       </div>
-    </div>
-    
-  </section>
-  <!-- end slider section -->
+    </header>
+    <!-- end header section -->
 
-  
-  <!-- about section -->
-
-  <section class="about_section " id="about-section" style="margin-top: 40px;">
-    <div class="container">
-      <div class="heading_container heading_center" style="margin-bottom: 10px;">
-        <h2>
-          About Megha
-        </h2>
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div class="slider_bg_box">
+        <img src="images/slider-bg.JPG" alt="" />
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.jpeg" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-           
-            <p>
-              With a background in professional makeup artistry and mehndi design, Megha brings creativity and expertise to every project. Whether you’re preparing for a wedding, festival, or any special event, Megha is dedicated to providing personalized services that cater to your unique style and preferences.  </p>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="offer_section layout_padding">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-7 px-0">
-          <div class="box offer-box1">
-            <img src="images/add.jpg" alt="">
-            <div class="detail-box">
-              <h6>
-                Mehndi & Two makeup looks
-              </h6>
-              <h2>
-                Upto 15% Off
-              </h2>
-              <a href="https://wa.me/9359412349">
-                Book Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5 px-0">
-          <div class="box offer-box2">
-            <img src="images/m-m.jpeg" alt="">
-            <div class="detail-box">
-              <h6>
-                Mehndi & One makeup looks
-              </h6>
-              <h2>
-                Upto 10% Off
-              </h2>
-              <a href="https://wa.me/9359412349">
-                Book Now
-              </a>
-            </div>
-          </div>
-          <div class="box offer-box3">
-            <img src="images/m-m2.jpg" alt="">
-            <div class="detail-box">
-              <h6>
-                Mehndi & Three makeup looks
-              </h6>
-              <h2>
-                Upto 20% Off
-              </h2>
-              <a href="https://wa.me/9359412349">
-                Book Now
+      <div class="slider_bg"></div>
+      <div class="container" style="position: relative; margin-top: 400px">
+        <div class="col-md-9 col-lg-9">
+          <div
+            class="detail-box"
+            style="
+              position: relative;
+              background: rgba(0, 0, 0, 0.5);
+              padding: 20px;
+              border-radius: 10px;
+            "
+          >
+            <h1
+              style="
+                font-family: &quot;Georgia&quot;, serif;
+                font-size: 32px;
+                font-weight: bold;
+                color: #fff;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+                letter-spacing: 2px;
+              "
+            >
+              Welcome to,<br />
+            </h1>
+            <span
+              id="makeover-text"
+              style="
+                font-family: &quot;Georgia&quot;, serif;
+                font-weight: bold;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                background: linear-gradient(90deg, #e3c567, #d4af37, #f2d857);
+                background-size: 200% auto;
+                -webkit-background-clip: text;
+                color: transparent;
+                text-shadow: 0 0 10px rgba(255, 223, 0, 0.7);
+                animation: goldShine 3s linear infinite;
+              "
+            >
+              Megha's Makeover
+            </span>
+            <div>
+              <a
+                href="https://wa.me/9359412349"
+                class="slider-link"
+                style="
+                  background-color: #25d366;
+                  color: #fff;
+                  padding: 10px 20px;
+                  text-decoration: none;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                  display: inline-flex;
+                  align-items: center;
+                "
+              >
+                <i
+                  class="fa fa-whatsapp"
+                  aria-hidden="true"
+                  style="font-size: 24px"
+                ></i>
+                &nbsp; Connect with us
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- end slider section -->
+
+    <!-- about section -->
+
+    <section class="about_section" id="about-section" style="margin-top: 40px">
+      <div class="container">
+        <div
+          class="heading_container heading_center"
+          style="margin-bottom: 10px"
+        >
+          <h2>About Megha</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="images/about-img.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <p>
+                With a background in professional makeup artistry and mehndi
+                design, Megha brings creativity and expertise to every project.
+                Whether you’re preparing for a wedding, festival, or any special
+                event, Megha is dedicated to providing personalized services
+                that cater to your unique style and preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer_section layout_padding">
+      <div class="heading_container heading_center"  style="margin-bottom: 10px">
+        <h2>Exclusive Offers</h2>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 px-0">
+            <div class="box offer-box1">
+              <img src="images/add.jpg" alt="" />
+              <div class="detail-box">
+                <h6>Mehndi & Two makeup looks</h6>
+                <h2>Upto 15% Off</h2>
+                <a href="https://wa.me/9359412349"> Book Now </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 px-0">
+            <div class="box offer-box2">
+              <img src="images/m-m.jpeg" alt="" />
+              <div class="detail-box">
+                <h6>Mehndi & One makeup looks</h6>
+                <h2>Upto 10% Off</h2>
+                <a href="https://wa.me/9359412349"> Book Now </a>
+              </div>
+            </div>
+            <div class="box offer-box3">
+              <img src="images/m-m2.jpg" alt="" />
+              <div class="detail-box">
+                <h6>Mehndi & Three makeup looks</h6>
+                <h2>Upto 20% Off</h2>
+                <a href="https://wa.me/9359412349"> Book Now </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- services section -->
     <!-- <form id="inquiry-form">
@@ -228,27 +261,21 @@
       <button type="submit">Submit Inquiry</button>
       <div id="status"></div>
    </form> -->
-    <section class="blog_section" >
+    <section class="blog_section">
       <div class="container">
         <div class="heading_container heading_center">
-          <h2>
-            Our Services
-          </h2>
+          <h2>Our Services</h2>
         </div>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/bride.jpg" alt="">
+                  <img src="images/bride.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                    Bridal Makeup
-                  </h6>
-                
+                  <h6>Bridal Makeup</h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -256,15 +283,11 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/baby-shower.jpg" alt="">
+                  <img src="images/baby-shower.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                    Baby Shower Makeup
-                  </h6>
-                
+                  <h6>Baby Shower Makeup</h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -272,15 +295,11 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/engagemnt.jpg" alt="">
+                  <img src="images/engagemnt.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                  Engagement Makeup
-                  </h6>
-                  
+                  <h6>Engagement Makeup</h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -288,15 +307,11 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/party.jpg" alt="">
+                  <img src="images/party.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                    Party Makeup
-                  </h6>
-                  
+                  <h6>Party Makeup</h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -304,20 +319,15 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/bridal-mehndi.jpeg" alt="">
+                  <img src="images/bridal-mehndi.jpeg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                    Bridal Mehndi
-                  </h6>
+                  <h6>Bridal Mehndi</h6>
                   <h6>
                     Price
-                    <span>
-                      3000
-                    </span>
+                    <span> 3000 </span>
                   </h6>
                 </div>
-              
               </a>
             </div>
           </div>
@@ -325,20 +335,15 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/baby-shower-mehndi.jpg" alt="">
+                  <img src="images/baby-shower-mehndi.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                   Baby Shower Mehndi
-                  </h6>
+                  <h6>Baby Shower Mehndi</h6>
                   <h6>
                     Price
-                    <span>
-                     2000
-                    </span>
+                    <span> 2000 </span>
                   </h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -346,20 +351,15 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/engagemnt-mehndi.jpg" alt="">
+                  <img src="images/engagemnt-mehndi.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                   engagemnt mehndi
-                  </h6>
+                  <h6>engagemnt mehndi</h6>
                   <h6>
                     Price
-                    <span>
-                      2000
-                    </span>
+                    <span> 2000 </span>
                   </h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -367,20 +367,15 @@
             <div class="box">
               <a href="">
                 <div class="img-box">
-                  <img src="images/occasional-mehndi.jpg" alt="">
+                  <img src="images/occasional-mehndi.jpg" alt="" />
                 </div>
                 <div class="detail-box">
-                  <h6>
-                   Occasional Mehndi
-                  </h6>
+                  <h6>Occasional Mehndi</h6>
                   <h6>
                     Price
-                    <span>
-                      1000
-                    </span>
+                    <span> 1000 </span>
                   </h6>
                 </div>
-               
               </a>
             </div>
           </div>
@@ -393,9 +388,9 @@
       </div>
     </section>
 
-  <!-- shop section -->
+    <!-- shop section -->
 
-  <!-- <section class="shop_section layout_padding">
+    <!-- <section class="shop_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -612,172 +607,178 @@
     </div>
   </section> -->
 
-  <!-- end shop section -->
+    <!-- end shop section -->
 
+    <!-- end about section -->
 
-  <!-- end about section -->
+    <!-- offer section -->
 
-  <!-- offer section -->
+    <!-- end offer section -->
 
- 
-  <!-- end offer section -->
+    <!-- blog section -->
 
-  <!-- blog section -->
-
-  <section class="blog_section ">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Signature Cultural Makeovers
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/b1.jpeg" alt="">
-              <!-- <h4 class="blog_date">
+    <section class="blog_section">
+      <div class="container">
+        <div class="heading_container"  style="margin-top: 20px">
+          <h2>Signature Cultural Makeovers</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/b1.jpeg" alt="" />
+                <!-- <h4 class="blog_date">
                 14 <br>
                 July
               </h4> -->
-            </div>
-            <div class="detail-box">
-              <h5>
-                South Indian Look
-              </h5>
-              <p>
-                A classic South Indian look with bold, kohl-lined eyes, golden eyeshadow, and a rich red lip. Paired with traditional jewelry and fresh flowers in the hair, this look radiates timeless elegance.
-              </p>
-             
+              </div>
+              <div class="detail-box">
+                <h5>South Indian Look</h5>
+                <p>
+                  A classic South Indian look with bold, kohl-lined eyes, golden
+                  eyeshadow, and a rich red lip. Paired with traditional jewelry
+                  and fresh flowers in the hair, this look radiates timeless
+                  elegance.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/b2.jpeg" alt="">
-              <!-- <h4 class="blog_date">
+          <div class="col-md-6">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/b2.jpeg" alt="" />
+                <!-- <h4 class="blog_date">
                 15 <br>
                 July
               </h4> -->
-            </div>
-            <div class="detail-box">
-              <h5>
-                Maharashtrian Look
-              </h5>
-              <p>
-                Bold eye makeup with copper tones, a striking red lip, and sharp brows. Finished with the iconic Maharashtrian 'nath' and floral-adorned bun, this look exudes regal tradition.
-              </p>
-              
+              </div>
+              <div class="detail-box">
+                <h5>Maharashtrian Look</h5>
+                <p>
+                  Bold eye makeup with copper tones, a striking red lip, and
+                  sharp brows. Finished with the iconic Maharashtrian 'nath' and
+                  floral-adorned bun, this look exudes regal tradition.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end blog section -->
+    <!-- end blog section -->
 
-  <!-- client section -->
+    <!-- client section -->
 
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Testimonial
-        </h2>
-      </div>
-      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client.jpeg" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                       Pooja waghmare
-                      </h6>
+    <section class="client_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Testimonial</h2>
+        </div>
+        <div
+          id="carouselExample2Controls"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="images/client.jpeg" alt="" />
                     </div>
-                    <p>
-                      Megha did an amazing job with my South Indian bridal makeup! It lasted all day, and I got so many compliments.Thank you so much
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6>Pooja waghmare</h6>
+                      </div>
+                      <p>
+                        Megha did an amazing job with my South Indian bridal
+                        makeup! It lasted all day, and I got so many
+                        compliments.Thank you so much
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="images/client2.jpeg" alt="" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6>Sakshi Patil</h6>
+                      </div>
+                      <p>
+                        I loved my Maharashtrian bridal look! Megha blended
+                        tradition and style perfectly, and the makeup went great
+                        with my outfit.
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="images/client3.jpeg" alt="" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6>Swara Patil</h6>
+                      </div>
+                      <p>
+                        Megha gave me the perfect glam look for my event. The
+                        makeup was flawless and made me feel so confident!
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client2.jpeg" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Sakshi Patil
-                      </h6>
-                    </div>
-                    <p>
-                      I loved my Maharashtrian bridal look! Megha blended tradition and style perfectly, and the makeup went great with my outfit.
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="carousel_btn-container">
+            <a
+              class="carousel-control-prev"
+              href="#carouselExample2Controls"
+              role="button"
+              data-slide="prev"
+            >
+              <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExample2Controls"
+              role="button"
+              data-slide="next"
+            >
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/client3.jpeg" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Swara Patil
-                      </h6>
-                    </div>
-                    <p>
-                      Megha gave me the perfect glam look for my event. The makeup was flawless and made me feel so confident!
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel_btn-container">
-          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
-            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end client section -->
+    <!-- end client section -->
 
-  <!-- info section -->
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row info_form_social_row">
-        <div class="col-md-8 col-lg-9">
-          <!-- <div class="info_form">
+    <!-- info section -->
+    <section class="info_section layout_padding2">
+      <div class="container">
+        <div class="row info_form_social_row">
+          <div class="col-md-8 col-lg-9">
+            <!-- <div class="info_form">
             <form action="">
               <input type="email" placeholder="Enter your email">
               <button>
@@ -785,130 +786,160 @@
               </button>
             </form>
           </div> -->
-        </div>
-        <div class="col-md-4 col-lg-3">
-
-          <div class="social_box">
-            <!-- <a href="">
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="social_box">
+              <!-- <a href="">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a> -->
-            <a href="https://wa.me/9359412349">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.instagram.com/makeup.bymegha?utm_source=qr&igsh=N3h0cWJjeWxvZm5v">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
+              <a href="https://wa.me/9359412349">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/makeup.bymegha?utm_source=qr&igsh=N3h0cWJjeWxvZm5v"
+              >
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
 
-            <a href="tel:9359412349">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row info_main_row">
-        <div class="col-md-6 col-lg-3">
-          <div class="info_links">
-            <h4>
-              Menu
-            </h4>
-            <div class="info_links_menu">
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="shop.html">Services</a>
-              <a href="blog.html">Our Latest Work</a>
+              <a href="tel:9359412349">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="info_insta">
-            <h4>
-              Certified Makeup Artist
-            </h4>
-            <div class="insta_box" style="max-width: 400px; margin: 20px auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; background-color: white;">
-              <!-- Title Section -->
-              <div style="text-align: center; padding: 15px 10px; background-color: #f7f7f7; font-size: 18px; font-weight: bold; color: #333;">
+        <div class="row info_main_row">
+          <div class="col-md-6 col-lg-3">
+            <div class="info_links">
+              <h4>Menu</h4>
+              <div class="info_links_menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Services</a>
+                <a href="blog.html">Our Latest Work</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="info_insta">
+              <h4>Certified Makeup Artist</h4>
+              <div
+                class="insta_box"
+                style="
+                  max-width: 400px;
+                  margin: 20px auto;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  border-radius: 8px;
+                  overflow: hidden;
+                  background-color: white;
+                "
+              >
+                <!-- Title Section -->
+                <div
+                  style="
+                    text-align: center;
+                    padding: 15px 10px;
+                    background-color: #f7f7f7;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333;
+                  "
+                >
                   Professional Certified Makeup Artist
+                </div>
+
+                <!-- Image Section -->
+                <div
+                  style="
+                    background-color: azure;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                  "
+                >
+                  <img
+                    src="images/certificate.jpeg"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      object-fit: cover;
+                      border-radius: 8px;
+                    "
+                    alt="Certificate"
+                  />
+                </div>
               </div>
-              
-              <!-- Image Section -->
-              <div style="background-color: azure; display: flex; justify-content: center; align-items: center; padding: 10px;">
-                  <img src="images/certificate.jpeg" style="max-width: 100%; height: auto; object-fit: cover; border-radius: 8px;" alt="Certificate">
-              </div>
+            </div>
           </div>
-          
+          <div class="col-md-6 col-lg-3">
+            <div class="info_detail">
+              <h4>About Megha</h4>
+              <p class="mb-0">
+                With a background in professional makeup artistry and mehndi
+                design, Megha brings creativity and expertise to every project.
+                Whether you’re preparing for a wedding, festival, or any special
+                event, Megha is dedicated to providing personalized services
+                that cater to your unique style and preferences.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3"  >
-          <div class="info_detail">
-            <h4>
-              About Megha
-            </h4>
-            <p class="mb-0">
-              With a background in professional makeup artistry and mehndi design, Megha brings creativity and expertise to every project. Whether you’re preparing for a wedding, festival, or any special event, Megha is dedicated to providing personalized services that cater to your unique style and preferences. </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <h4>
-            Contact Us
-          </h4>
-          <div class="info_contact">
-            <a href="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Sangli
-              </span>
-            </a>
-            <a href="tel:+919359412349">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call 9359412349
-              </span>
-            </a>
-            <a href="https://wa.me/919359412349?text=Hello%20there!" target="_blank">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i>
-              Chat with us on WhatsApp
-          </a>
-            <a href="mailto:meghahonmore99@gmail.com?subject=Subject&body=Message content">
-              <i class="fa fa-envelope"></i>
-             
-              <span>
-              meghahonnmore99@gmail.com
-              </span>
-            </a>
+          <div class="col-md-6 col-lg-3">
+            <h4>Contact Us</h4>
+            <div class="info_contact">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Sangli </span>
+              </a>
+              <a href="tel:+919359412349">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span> Call 9359412349 </span>
+              </a>
+              <a
+                href="https://wa.me/919359412349?text=Hello%20there!"
+                target="_blank"
+              >
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                Chat with us on WhatsApp
+              </a>
+              <a
+                href="mailto:meghahonmore99@gmail.com?subject=Subject&body=Message content"
+              >
+                <i class="fa fa-envelope"></i>
+
+                <span> meghahonnmore99@gmail.com </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-     
-  </section>
+    </section>
 
-  <!-- end info_section -->
+    <!-- end info_section -->
 
- <!-- Floating WhatsApp Button -->
- <a href="https://wa.me/9359412349" class="whatsapp-float" target="_blank">
-  <i class="whatsapp-icon">&#x1F4F1;</i> <!-- Phone emoji -->
-</a>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9359412349" class="whatsapp-float" target="_blank">
+      <i class="whatsapp-icon">&#x1F4F1;</i>
+      <!-- Phone emoji -->
+    </a>
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> Designed by pooja with ♥
-        <!-- <a href="https://html.design/">Free Html Templates</a> -->
-      </p>
-    </div>
-  </footer>
-  <!-- footer section -->
+    <!-- footer section -->
+    <footer class="footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span> Designed by pooja with ♥
+          <!-- <a href="https://html.design/">Free Html Templates</a> -->
+        </p>
+      </div>
+    </footer>
+    <!-- footer section -->
 
-  
-
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- <script type="module">
+    <!-- jQery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
     import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
@@ -957,9 +988,5 @@
     // Attach the submitForm function to the form's submit event
     document.getElementById("inquiry-form").addEventListener("submit", submitForm);
   </script> -->
- 
-
-
-</body>
-
+  </body>
 </html>
